@@ -40,50 +40,26 @@ $coordeNS = [1];
       }
     }
   }
-?>
+
 <?php
-    $n = readline();
+$entrada = fgets(STDIN);
 
-    while($n > 0){
-        $input = readline();
-        $input = explode(" ", $input);
-    	$input = array_reverse($input);
-    	$input = implode(" ", $input);
-    	
-    	$replace = array("P", "F", "T", "R", "F", "J", "X");
-    	$forreplace = array("B", "V", "D", "L", "S", "Z", "S");
-    	$input = str_replace($replace, $forreplace, $input);
-    	
-    	print($input."\n");
-    	$n--;
-    }
-?>
-<?PHP
-$N = fgets(S);
-$i = 0;
 
-while($i<$N){
-    //$p = array();
-    $p = explode(" ", readline());
-    $p = array_reverse($p);
-    $p = implode(" ", $p);
+while($aux<$entrada){
+
+    $letra = explode(" ", fgets(STDIN));
+    $letra = array_reverse($letra);
+    $letra = implode(" ", $letra);
     
-    $p = str_replace('P', 'B', $p);
-    $p = str_replace('F', 'V', $p);
-    $p = str_replace('T', 'D', $p);
-    $p = str_replace('R', 'L', $p);
-    $p = str_replace('J', 'Z', $p);
-    $p = str_replace('X', 'S', $p);
-    /*
-    $t = count($p);
-    $a = '';
-    for($b = 0;$b<$t;$b++){
-        $a .= $p[$b]." ";
-    }
-    $a = trim($a);
-    */
-    echo "$p\n";
-    $i++;
+    $letra = str_replace('P', 'B', $letra);
+    $letra = str_replace('F', 'V', $letra);
+    $letra = str_replace('T', 'D', $letra);
+    $letra = str_replace('R', 'L', $letra);
+    $letra = str_replace('J', 'Z', $letra);
+    $letra = str_replace('X', 'S', $letra);
+    
+    echo "$letra","<br>";
+    $aux++;
 }
 
 ?>
